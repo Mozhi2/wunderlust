@@ -290,19 +290,19 @@
 
                 <fieldset>
                     <legend>Preferred Contact Method<span>*</span></legend>
-                    <input type="radio" id="Phone" name="myInfo" value="Phone" required>
+                    <input type="radio" id="Phone" name="myInfo" value="Phone" required><br>
                     <label for="Phone">Phone</label>
-                    <input type="radio" id="Text" name="myInfo" value="Text" required>
+                    <input type="radio" id="Text" name="myInfo" value="Text" required><br>
                     <label for="Text">Text</label>
-                    <input type="radio" id="Email" name="myInfo" value="Email" required>
+                    <input type="radio" id="Email" name="myInfo" value="Email" required><br>
                     <label for="Email">Email</label>
                 </fieldset>
 
                 <label for="email">Email<span>*</span></label>
-                <input type="email" id="email" name="email" placeholder="Please Enter your Email Address" required>
+                <input type="email" id="email" name="email" placeholder="Please Enter your Email Address" required><br>
 
                 <label for="number">Phone<span>*</span></label>
-                <input type="tel" id="number" name="number" placeholder="Please Enter your Phone number" required>
+                <input type="tel" id="number" name="number" placeholder="Please Enter your Phone number" required><br>
 
 
 
@@ -318,20 +318,25 @@
                     <option value="CT">Tenerife</option>
                     <option value="DE">Valencia</option>
                 </select>
-                
+
                 <fieldset>
-                <legend>When is your travel time:</legend>
-                <input type="checkbox" id="season1" name="season1" value="Fall">
-                <label for="season1"> Fall</label>
-                <input type="checkbox" id="season2" name="season2" value="Winter">
-                <label for="season2"> winter</label>
-                <input type="checkbox" id="season3" name="season3" value="Spring">
-                <label for="season3"> Spring</label>
-                <input type="checkbox" id="season4" name="season4" value="Summer">
-                <label for="season4"> Summer</label>
-                <input type="checkbox" id="flex" name="flex" value="Flexible">
-                <label for="flex"> Flexible</label>
-            </fieldset>
+                    <legend>When Is Your Travel Time:</legend>
+                    <input type="checkbox" id="season1" name="season1" value="Fall">
+                    <label for="season1"> Fall</label>
+                    <input type="checkbox" id="season2" name="season2" value="Winter">
+                    <label for="season2"> winter</label>
+                    <input type="checkbox" id="season3" name="season3" value="Spring">
+                    <label for="season3"> Spring</label>
+                    <input type="checkbox" id="season4" name="season4" value="Summer">
+                    <label for="season4"> Summer</label>
+                    <input type="checkbox" id="flex" name="flex" value="Flexible">
+                    <label for="flex"> Flexible</label>
+                </fieldset>
+
+                <label for="comment">Comments:</label>
+		        <textarea name="comment" id="comment" rows="8" cols="273"></textarea>
+	    
+		        <input type="submit" name="submit" value="submit">
             </form>
 
         </section>
@@ -342,15 +347,9 @@
     <footer>
 
         <small>Copyright 2021 Wunderlust</small>
-        <small>Privacy Statement</small>
-        <small>Terms of Service</small>
+        <p>Privacy Statement</p>
+        <p>Terms of Service</p>
     </footer>
-
-
-
-
-
-
 
 </body>
 

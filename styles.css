@@ -155,6 +155,7 @@ table {
     --input-focus-h: 245;
     --input-focus-s: 100%;
     --input-focus-l: 42%;
+    --form-control-color: rebeccapurple;
 }
 
 /* ---------- GLOBAL STYLES ---------- */
@@ -166,7 +167,7 @@ table {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -210,7 +211,7 @@ body {
 }
 
 
-#menu-toggle {
+#toggle {
     display: block;
     position: relative;
     top: 50px;
@@ -222,7 +223,7 @@ body {
     user-select: none;
 }
 
-#menu-toggle a {
+#toggle a {
     text-decoration: none;
     color: #232323;
     -webkit-transition: color 0.3s ease;
@@ -230,13 +231,13 @@ body {
     transition: color 0.3s ease;
 }
 
-#menu-toggle a:hover {
+#toggle a:hover {
     color: #4f7794;
 }
 
 
 /* The hamburger button hidden inside an input element */
-#menu-toggle input {
+#toggle input {
     display: block;
     width: 30px;
     height: 30px;
@@ -252,19 +253,19 @@ body {
     -webkit-touch-callout: none;
 }
 
-#menu-toggle label {
+#toggle label {
     position: relative;
     display: block;
     width: 30px;
     height: 30px;
 }
 
-#menu-toggle label span {
+#toggle label span {
     display: none;
 }
 
 /*  Hamburger  */
-#menu-toggle label div {
+#toggle label div {
     display: block;
     width: 30px;
     height: 2px;
@@ -281,20 +282,20 @@ body {
     transition: all 0.3s ease;
 }
 
-#menu-toggle label div:first-child {
+#toggle label div:first-child {
     -webkit-transform-origin: 0% 100%;
     -ms-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
 }
 
-#menu-toggle label div:nth-child(2) {
+#toggle label div:nth-child(2) {
     -webkit-transform-origin: 0% 0%;
     -ms-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
 }
 
 /*  Change the color of the hamburger when toggled   */
-#menu-toggle input:checked+label div {
+#toggle input:checked+label div {
     background: #232323;
 }
 
@@ -322,6 +323,83 @@ body {
 }
 
 /*  Slide the menu in from left when the input is checked  */
-#menu-toggle input:checked~ul {
+#toggle input:checked~ul {
     left: 0;
 }
+
+#names input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+}
+
+#names input:not(textarea) {
+    line-height: 1;
+    height: 2.25rem;
+}
+
+#names[type="file"] {
+    font-size: 0.9em;
+    padding-top: 0.35rem;
+}
+
+#names:focus {
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) + 40%), 0.8);
+}
+
+#names {
+    transition: 180ms box-shadow ease-in-out;
+}
+
+#names:focus {
+    outline: 3px solid transparent;
+}
+
+.radio-input {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="radio"] {
+
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+
+  input[type="radio"]::before {
+    background-color: CanvasText;
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  

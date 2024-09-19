@@ -218,7 +218,7 @@ body {
 }
 
 header{
-    background-color: linear-gradient(var(--teal), var(--white));
+    background-image: linear-gradient(var(--teal), var(--white));
 }
 
 header img{
@@ -238,6 +238,7 @@ header img{
 
 h1{
     order: 3;
+    font-family: var(--fonts);
 }
 
 nav {

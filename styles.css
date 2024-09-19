@@ -183,19 +183,26 @@ table {
 /* ----- SKIP LINK STYLES ----- */
 /* skip link styles from: https://webaim.org/techniques/css/invisiblecontent/ */
 
-#skip {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
-#skip:focus {
-    position: static;
-    width: auto;
-    height: auto;
+/* Add 	selctor to target the skip ID in the pseudo state of focus */
+
+  #skip:focus {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+header{
+	padding: 1rem;
+	border-bottom: 0.25rem solid var(--pink);
 }
 
 /* ----- BODY STYLES ----- */
@@ -209,7 +216,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/*
 
 #toggle {
     display: block;
@@ -237,6 +244,7 @@ body {
 
 
 /* The hamburger button hidden inside an input element */
+/*
 #toggle input {
     display: block;
     width: 30px;
@@ -248,8 +256,11 @@ body {
     cursor: pointer;
     opacity: 0;
     /* hide this */
+    /*
     z-index: 2;
+    
     /* and place it over the hamburger */
+    /*
     -webkit-touch-callout: none;
 }
 
@@ -263,8 +274,9 @@ body {
 #toggle label span {
     display: none;
 }
-
+*/
 /*  Hamburger  */
+/*
 #toggle label div {
     display: block;
     width: 30px;
@@ -295,6 +307,7 @@ body {
 }
 
 /*  Change the color of the hamburger when toggled   */
+/*
 #toggle input:checked+label div {
     background: #232323;
 }
@@ -302,6 +315,7 @@ body {
 
 
 /*  Use absolute positioning to place the menu off-screen  */
+/*
 .active {
     position: absolute;
     width: 300px;
@@ -311,6 +325,7 @@ body {
     background: #ededed;
     list-style-type: none;
     /* Hide the menu off-screen to the left */
+    /*
     left: -100%;
     -webkit-transition: left 0.3s ease;
     -o-transition: left 0.3s ease;
@@ -323,6 +338,7 @@ body {
 }
 
 /*  Slide the menu in from left when the input is checked  */
+/*
 #toggle input:checked~ul {
     left: 0;
 }
@@ -365,8 +381,8 @@ body {
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.1;
-    display: grid;
-    grid-template-columns: 1em auto;
+    display: flex;
+    flex-flow: wrap;
     gap: 0.5em;
 }
 

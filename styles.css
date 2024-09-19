@@ -200,10 +200,7 @@ table {
 	height: auto;
 }
 
-header{
-	padding: 1rem;
-	border-bottom: 0.25rem solid var(--pink);
-}
+
 
 /* ----- BODY STYLES ----- */
 
@@ -221,13 +218,13 @@ header{
     background-image: linear-gradient(var(--teal), var(--white));
 }
 
-header img{
+/*header img{
 	display: block;
 	width: 100%;
 	max-width: 150px;
 	margin: 0 auto;
 }
-
+*/
 #logo{
     order: 1;
     display: block;

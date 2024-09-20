@@ -264,10 +264,52 @@ nav ul li {
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 1.5em; /* Adjust header size */
+        font-family: Molle, "sans-serif";
     }
 
     h2, h3 {
         font-size: 1.25em; /* Adjust section header sizes */
+        font-family: Molle, "sans-serif";
+    }
+
+    h4{
+        font: "sans-serif";
+        color: var(--black);
+    }
+
+    #plan{
+        background-color: var(--yellow);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        justify-items: center;
+    }
+
+    #plan img{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        justify-items: center;
+        padding: 20px; /* Space around the SVG */
+        margin: 10px; /* Space between boxes */
+        border: 2px solid #ffffff; /* Border around the box */
+        border-radius: 8px; /* Rounded corners */
+        background-color: var(--blue); /* Background color */
+       
+    }
+
+    #testimonials{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        justify-items: center;
+    }
+
+    #about{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        justify-items: center;
     }
 
     form {
@@ -282,6 +324,14 @@ nav ul li {
     footer {
         text-align: center;
         padding: 20px;
+    }
+
+    footer a{
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
     }
 }
 

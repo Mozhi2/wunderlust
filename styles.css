@@ -170,7 +170,7 @@ table {
     box-sizing: border-box;
 }
 
-/*
+
 .sr-only {
     position: absolute;
     left: -10000px;
@@ -201,8 +201,94 @@ table {
 }
 
 
+body {
+    
+    background-color: var(--light-gray);
+    color: var(--black);
+    line-height: 1.35;
+    box-sizing: border-box;
+    font-family: var(--fonts);
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Default for desktop view */
+    margin: 0 10px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        display: block; /* Stack navigation items on mobile */
+    }
+
+    nav ul li {
+        display: block; /* Change to block for mobile view */
+        margin: 5px 0;
+    }
+
+    #img-grid {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    #img-grid img {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #contact {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
+
+/* Additional styles for smaller screens */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Adjust header size */
+    }
+
+    h2, h3 {
+        font-size: 1.25em; /* Adjust section header sizes */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column; /* Stack form elements */
+    }
+
+    input, select {
+        margin-bottom: 10px; /* Add space between form elements */
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
 
 /* ----- BODY STYLES ----- */
+/*
 
 body {
     background-color: var(--light-gray);
@@ -216,6 +302,7 @@ body {
 
 header{
     background-image: linear-gradient(var(--teal), var(--white));
+
 }
 
 /*header img{
@@ -225,12 +312,14 @@ header{
 	margin: 0 auto;
 }
 */
-#logo{
+/*
+#logo a{
     order: 1;
     display: block;
 	width: 100%;
 	max-width: 150px;
 	margin: 0 auto;
+
 }
 
 h1{

@@ -255,6 +255,21 @@ nav ul li {
         justify-items: center;
     }
 
+
+    #plan h3{
+        order: 1;
+    }
+
+    #plan h4{
+        order: 2;
+    }
+
+    #plan a{
+        order: 3;
+    }
+
+    
+
     #plan img{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
